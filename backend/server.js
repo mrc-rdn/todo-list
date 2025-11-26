@@ -21,7 +21,7 @@ const db = new pg.Pool({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(
   cors({
-    origin: "http://localhost:5173", // your React app's URL
+    origin: "https://frontend-5chc.onrender.com", // your React app's URL
     
   })
 );
