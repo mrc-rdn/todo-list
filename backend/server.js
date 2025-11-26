@@ -19,7 +19,12 @@ const db = new pg.Client({
 db.connect();
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // your React app's URL
+    
+  })
+);
 app.use(express.json());
 
 //create a todo 
